@@ -1,0 +1,257 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+{% block title %}Landing Page{% endblock %}
+
+{% block additional_css %}
+<link rel="stylesheet" href="{% static 'css/landing.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<body data-spy="scroll" data-target="#navbar" data-offset="72" class="position-relative">
+    <header class="fixed-top page-header">
+        <div class="container-fluid container-fluid-max ">
+            <nav id="navbar" class="navbar navbar-expand-lg navbar-dark ">
+                <a class="navbar-brand" href="#home">Company name</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-lg-between" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#process">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#some-facts">Some Facts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#more-details">More Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sign-up">Sign Up</a>
+                        </li>
+                    </ul>
+                    <div class="text-white">
+                        <a href="tel:1234567890" class="mr-2">
+                            <i class="fas fa-phone"></i>
+                            <div class="d-none d-xl-inline">1234567890</div>
+                        </a>
+                        <a href="mailto:info@company.tld">
+                            <i class="fas fa-envelope"></i>
+                            <div class="d-none d-xl-inline">info@company.tld</div>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="d-flex align-items-center position-relative vh-100 cover hero"
+            style="background-image:url({% static 'img/bg_landing.jpg' %});">
+            <div class="container-fluid container-fluid-max">
+                <div class="row">
+                    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                        <h1 class="text-white">Do what you want!</h1>
+                        <div class="mt-3">
+                            <a class="btn bg-red text-white mr-2" href="" role="button">Secondary Action</a>
+                            <a class="btn bg-red text-white" href="{% url 'dashboard' %}" role="button">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="process">
+            <div class="container-fluid container-fluid-max">
+                <div class="row text-center py-5">
+                    <div class="col-12 pb-4">
+                        <h2 class="text-red">How It Works</h2>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <span class="fa-stack fa-2x">
+                            <i class="fas fa-circle fa-stack-2x text-red"></i>
+                            <i class="fas fa-map-marked fa-stack-1x text-white"></i>
+                        </span>
+                        <h3 class="mt-3 text-red h4">Choose an option</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed repudiandae.</p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <span class="fa-stack fa-2x">
+                            <i class="fas fa-circle fa-stack-2x text-red"></i>
+                            <i class="fas fa-plane fa-stack-1x text-white"></i>
+                        </span>
+                        <h3 class="mt-3 text-red h4">Choose X</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed repudiandae.</p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <span class="fa-stack fa-2x">
+                            <i class="fas fa-circle fa-stack-2x text-red"></i>
+                            <i class="fas fa-car fa-stack-1x text-white"></i>
+                        </span>
+                        <h3 class="mt-3 text-red h4">Choose Y</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed repudiandae.</p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <span class="fa-stack fa-2x">
+                            <i class="fas fa-circle fa-stack-2x text-red"></i>
+                            <i class="fas fa-home fa-stack-1x text-white"></i>
+                        </span>
+                        <h3 class="mt-3 text-red h4">Choose Z</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed repudiandae.</p>
+                    </div>
+                    <div class="col-12 pt-3">
+                        <a class="btn bg-red text-white" target="_blank"
+                            href="x" role="button">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="some-facts" class="some-facts bg-lightblue">
+            <div class="row no-gutters">
+                <div class="col-12 col-md-6 d-flex align-items-center order-1 order-md-0">
+                    <div class="p-15">
+                        <h3>Fact 1</h3>
+                        <p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <a class="btn bg-red text-white" target="_blank"
+                            href="X" role="button">Read More →</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-0 order-md-1">
+                    <div class="vh-100 cover"
+                    style="background-image:url({% static 'img/jungle.jpg' %});">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-2">
+                    <div class="vh-100 cover"
+                    style="background-image:url({% static 'img/jungle.jpg' %});">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center order-3">
+                    <div class="p-15">
+                        <h3>Fact 2</h3>
+                        <p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <a class="btn bg-red text-white" target="_blank"
+                            href="X" role="button">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="more-details" class="more-details py-5">
+            <div class="container-fluid container-fluid-max">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="pb-3 text-red">More Details</h2>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <a href="" class="text-white">
+                            <figure class="position-relative overflow-hidden">
+                                <img class="img-fluid"
+                                    src="{% static 'img/butterfly.jpg' %}" alt="Butterfly">
+                                <figcaption class="d-flex align-items-center justify-content-center position-absolute">
+                                    <h3>Detail 1</h3>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <a href="" class="text-white">
+                            <figure class="position-relative overflow-hidden">
+                                <img class="img-fluid"
+                                    src="{% static 'img/flower.jpg' %}"
+                                    alt="Flower">
+                                <figcaption class="d-flex align-items-center justify-content-center position-absolute">
+                                    <h3>Detail 2</h3>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <a href="" class="text-white">
+                            <figure class="position-relative overflow-hidden">
+                                <img class="img-fluid"
+                                    src="{% static 'img/ruin.jpg' %}" alt="Ruin">
+                                <figcaption class="d-flex align-items-center justify-content-center position-absolute">
+                                    <h3>Detail 3</h3>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <a href="" class="text-white">
+                            <figure class="position-relative overflow-hidden">
+                                <img class="img-fluid"
+                                    src="{% static 'img/leaf.jpg' %}"
+                                    alt="Leaf">
+                                <figcaption class="d-flex align-items-center justify-content-center position-absolute">
+                                    <h3>Detail 4</h3>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <a href="" class="text-white">
+                            <figure class="position-relative overflow-hidden">
+                                <img class="img-fluid"
+                                    src="{% static 'img/waterfall.jpg' %}"
+                                    alt="Waterfall">
+                                <figcaption class="d-flex align-items-center justify-content-center position-absolute">
+                                    <h3>Detail 5</h3>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <a class="btn bg-red text-white" href="" role="button">More Details ↓</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="sign-up" class="py-5 sign-up bg-lightblue">
+            <div class="container-fluid container-fluid-max">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-auto py-3 text-center">
+                        <h2 class="mb-0 text-red">Ready to start?</h2>
+                        <p class="mb-0 h4 text-red font-weight-normal">Contact Us!</p>
+                    </div>
+                    <div class="col-12 col-md-auto d-flex justify-content-center align-items-center">
+                        <a class="btn bg-red text-white font-weight-bold" href="" role="button">
+                            REQUEST A QUOTE
+                            <i class="ml-1 fas fa-hand-point-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="py-5 page-footer">
+        <div class="container-fluid container-fluid-max">
+            <div class="row">
+                <div class="col-12 col-md-6 footer-child copyright">
+                    Company Name © 2020 All Rights Reserved
+                </div>
+                <div class="col-12 col-md-6 footer-child footer-links">
+                    <a href="" class="mr-3">Privacy Policy</a>
+                    <a href="">FAQ</a>
+                    <div>
+                        <small>Made with <i class="fas fa-heart text-red"></i> by <a href="#"
+                                target="_blank">Agency Name</a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% include 'bootstrap_js.html' %}
+    <script src="{% static 'js/landing.js' %}"></script>
+</body>
+
+{% endblock %}
+
