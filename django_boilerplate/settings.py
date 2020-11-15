@@ -37,8 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app_name' # this is the example app
-    'crispy_forms',
+    'app_name', # this is the example app
     'widget_tweaks',
 ]
 
@@ -76,12 +75,24 @@ WSGI_APPLICATION = 'django_boilerplate.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'django_boilerplate',
+        'USER': 'boilerplate_user',
+        'PASSWORD': 'test1234',
+        'HOST': 'ls-e9c87593b949fcf43ca921c73809916678e8212c.cu6enc4qtw7b.ap-southeast-1.rds.amazonaws.com',
+        'PORT': 5432,
     }
 }
+
 
 
 # Password validation
